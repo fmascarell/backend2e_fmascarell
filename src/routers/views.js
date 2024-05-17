@@ -17,7 +17,7 @@ router.get('/chat',(req,res)=>{
 
 router.get('/products', async(req, res) => {
     const result = await getProductService({...req.query});
-    return res.render('products', {title: 'productos', result});
+    return res.render('products', {title: 'productos', result, styles:'products.css'});
 });
 
 export default router;
